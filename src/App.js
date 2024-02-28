@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
+import { add_to_cart, empty_cart, get_products, remove_to_cart } from './redux/action';
 
 function App() {
+  const dispatch = useDispatch();
+  const stateData = useSelector((state) => state)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Redux with saga for the async opertions</h1>
+      <button onClick={() => dispatch(add_to_cart())}>Add to cart</button>
+      <button onClick={() => dispatch(empty_cart())}>clear cart</button>
+      <button onClick={() => dispatch(remove_to_cart())}>remove from cart</button>
+      <button onClick={() => dispatch(get_products())}>fetch products</button>
+
     </div>
   );
 }
