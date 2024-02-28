@@ -1,6 +1,6 @@
 import { ADD_TO_CART, REMOVE_TO_CART, GET_PRODUCT_LIST, EMPTY_CART } from "./constant"
 
-export const add_to_cart = () => {
+export const add_to_cart = (data) => {
     return (
         {
             type: ADD_TO_CART,

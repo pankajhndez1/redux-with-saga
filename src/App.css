@@ -2,6 +2,21 @@
   text-align: center;
 }
 
+.card {
+  text-align: center;
+  border: 2px solid;
+  padding: 10px;
+  width: fit-content;
+  display: flex;
+}
+
+.button-class{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
