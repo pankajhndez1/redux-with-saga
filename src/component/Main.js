@@ -3,6 +3,7 @@ import { add_to_cart, empty_cart, get_products, remove_to_cart } from '../redux/
 import { useDispatch, useSelector } from 'react-redux';
 import CartIcon from './CartIcon';
 import { Link } from 'react-router-dom';
+import WorkingWithUseReducer from './WorkingWithUseReducer';
 
 const Main = () => {
     const dispatch = useDispatch();
@@ -11,6 +12,9 @@ const Main = () => {
     return (
         <div><h1>Redux with saga for the async opertions</h1>
             <CartIcon />
+            <Link to="/working-with-use-reducer">
+                <p>WorkingWithUseReducer</p>
+            </Link>
             <Link to="/cart">
                 go to cart
             </Link>
